@@ -299,14 +299,29 @@ button:active {
     font-size: 0.9em;
 }
 
-/* Mobile responsive */
+/* Tablet (≤768px) */
 @media (max-width: 768px) {
-    .container {
-        padding: 10px;
+    body {
+        padding: 12px;
+    }
+
+    header {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 1.6em;
+        margin-bottom: 15px;
+    }
+
+    .feed {
+        padding: 20px;
     }
 
     .article {
         flex-direction: column;
+        gap: 12px;
     }
 
     .article-image {
@@ -318,7 +333,82 @@ button:active {
         flex-direction: column;
     }
 
+    .file-controls button {
+        width: 100%;
+    }
+
     .number-inputs {
         flex-direction: column;
+        gap: 10px;
+    }
+
+    .warning-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .doomscroll-warning button {
+        width: 100%;
+        max-width: 260px;
+        margin: 4px 0;
+    }
+}
+
+/* Phone (≤480px) */
+@media (max-width: 480px) {
+    body {
+        padding: 8px;
+    }
+
+    header {
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+    }
+
+    h1 {
+        font-size: 1.3em;
+    }
+
+    .feed {
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .settings-section h2 {
+        font-size: 1.1em;
+    }
+
+    .interest-input-group {
+        flex-direction: column;
+    }
+
+    .interest-input-group button {
+        width: 100%;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+        min-height: 44px;
+    }
+
+    button {
+        min-height: 44px;
+    }
+
+    .article {
+        padding: 15px;
+    }
+
+    .article h3 {
+        font-size: 1.05em;
+    }
+
+    .article-image {
+        height: 180px;
+    }
+
+    .doomscroll-warning {
+        padding: 20px 15px;
     }
 }
