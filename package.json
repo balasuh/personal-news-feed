@@ -1,0 +1,23 @@
+{
+  "name": "news-feed-backend",
+  "version": "1.0.0",
+  "description": "RSS aggregator backend for personal news feed",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "rss",
+    "news",
+    "aggregator"
+  ],
+  "author": "Hemanth",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.3.1",
+    "express": "^4.18.2",
+    "rss-parser": "^3.13.0"
+  }
+}

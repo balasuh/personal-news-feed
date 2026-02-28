@@ -1,0 +1,37 @@
+# Init file and directory
+files.zip
+archive/
+
+# Dependencies
+node_modules/
+
+# Cache files
+articles-cache.json
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.claude/
+
+# Environment variables
+.env
+.env.local
+
+# Feeds
+feeds.json
+
+# Caches
+articles-cache.json
+
+# Config
+config.js

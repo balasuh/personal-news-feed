@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal News Feed</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📰 Personal News Feed</h1>
+            
+            <div class="settings-section">
+                <h2>Settings</h2>
+                
+                <div class="number-inputs">
+                    <div>
+                        <label for="totalArticles">Total articles to show:</label>
+                        <input type="number" id="totalArticles" min="1" max="100" value="10">
+                    </div>
+                    <div>
+                        <label for="articlesPerInterest">Articles per interest:</label>
+                        <input type="number" id="articlesPerInterest" min="1" max="20" value="5">
+                    </div>
+                </div>
+
+                <div class="interest-input-group">
+                    <input type="text" id="interestInput" placeholder="Add an interest (e.g., AI, climate change, space)">
+                    <button onclick="addInterest()">Add Interest</button>
+                </div>
+
+                <div class="interest-list" id="interestList"></div>
+
+                <div class="file-controls">
+                    <button onclick="saveSettings()">💾 Save Settings</button>
+                    <button onclick="document.getElementById('fileInput').click()" class="btn-secondary">📂 Load Settings</button>
+                    <input type="file" id="fileInput" accept=".json" class="hidden" onchange="loadSettings(event)">
+                    <button onclick="loadFeed()">🔄 Refresh Feed</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="feed" id="feed">
+            <h2>Your Feed</h2>
+            <p style="color: #666;">Add some interests and click "Refresh Feed" to get started!</p>
+        </div>
+    </div>
+    <script src="config.js"></script>
+    <script src="logic.js"></script>
+</body>
+</html>
